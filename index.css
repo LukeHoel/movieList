@@ -1,0 +1,84 @@
+body {
+	margin: 0;
+	height: 100%;
+	background-color: #171717;
+	font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+	margin: 0;
+}
+.topBar {
+}
+#movieList {
+	display: flex;
+	flex-wrap: wrap;
+}
+.movie {
+	height: 300px;
+	margin: 10px;
+	cursor: pointer;
+	transition: all .2s ease;
+	box-sizing: border-box;
+	padding: 5px;
+}
+.movie:hover {
+	padding: 0;
+}
+#selectedMovie {
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+	animation: fadeIn .9S;
+}
+.movieInfo {
+	position: absolute;
+	z-index: 4;
+	color: white;
+	width: 300px;
+	margin: 20px;
+}
+.exitSelected {
+	position: absolute;		
+	z-index: 3;
+	color: white;
+	top: 5px;
+	right: 5px;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 30px;
+	height: 30px;
+	font-weight: bold;
+	font-size: 20px;
+	cursor: pointer;
+}
+.moviePlayer {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: black;
+}
+.backgroundGradient {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-image: linear-gradient(to right, rgba(0,0,0,.9) 300px, rgba(0,0,0,0));
+	width: 100%;
+	height: 100%;
+}
+.backgroundImage {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	width: 100%;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
